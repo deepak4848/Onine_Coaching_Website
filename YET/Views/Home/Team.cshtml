@@ -1,0 +1,459 @@
+﻿@model IEnumerable<YET.Models.UserModel.tbl_Teams>
+@{
+    ViewData["Title"] = "Team";
+}
+<style type="text/css">
+
+</style>
+
+<!-- INNER PAGE WRAPPER
+        ============================================= -->
+<div class="inner-page-wrapper">
+</div>
+<!-- ABOUT PAGE HERO
+            ============================================= -->
+<section id="about-page" class="page-hero-section division">
+    <div class="container">
+        <div class="row">
+
+
+            <!-- PAGE HERO TEXT -->
+            <div class="col-md-7">
+                <div class="hero-txt white-color">
+                    <h2 class="h2-xs">About YET</h2>
+                </div>
+            </div>
+            <!-- END PAGE HERO TEXT -->
+
+        </div>
+
+        <!-- End row -->
+    </div>
+    <!-- End container -->
+</section>
+<!-- END ABOUT PAGE HERO -->
+<!-- BREADCRUMB
+            ============================================= -->
+<div id="breadcrumb" class="bg-darkblue division">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb white-color">
+                        <li class="breadcrumb-item"><a href="#">&#91; Home &#93;</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About YET</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <!-- End row -->
+    </div>
+    <!-- End container -->
+</div>
+<!-- END BREADCRUMB -->
+
+
+
+
+
+
+<section id="about-2s" class="wide-60 about-section division">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <!-- Team Start -->
+            <div id="rs-team-2" class="rs-team-2 team-all pb-70">
+
+                <div class="container">
+                    <div class="row">
+                        @foreach (var item in Model)
+                        {
+                            <div class="col-lg-3 col-md-6 col-xs-6 mb-4">
+                                <div class="team-item">
+                                    <div class="team-img">
+                                        <a href="#">
+                                            <img class="img-size" src="@item.TeamImage">
+                                        </a>
+                                        <div class="social-icon">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="team-body">
+                                        <a href="teachers-single.html"><h3 class="name">@Html.DisplayFor(x=>item.TeamName)</h3></a>
+                                        <span class="designation">@Html.DisplayFor(x=>item.TeamDesignation) </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+
+
+                        }
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <!-- Team Start -->
+        @*   <div id="rs-team-2" class="rs-team-2 team-all pt-100 pb-70">
+            <center>
+            <div class="container">
+            <div class="row">
+            <asp:ListView ID="DataList2" runat="server" DataKeyField="tid" DataSourceID="SqlDataSource1">
+            <ItemTemplate>
+            <div class="col-lg-3 col-md-6 col-xs-6">
+            <div class="team-item">
+            <div class="team-img">
+            <a href="#">
+            <asp:Image ID="img" runat="server" ImageUrl='<%#Eval("timage","~/images/teachers/{0}") %>' />
+            </a>
+            <div class="social-icon">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            </div>
+            </div>
+            <div class="team-body">
+            <a href="teachers-single.html"><h3 class="name"><asp:Label runat="server" Text='<%# Eval("tname") %>'></asp:Label>  </h3></a>
+            <span class="designation"> <asp:Label ID="Label1" runat="server" Text='<%# Eval("tdesignation") %>'></asp:Label></span>
+            </div>
+            </div>
+            </div>
+            <div class="clearfix"></div>
+            </ItemTemplate>
+            </asp:ListView>
+            </div>
+            </div>
+            </center>
+            </div>*@
+
+    </div>
+    </div>
+</section>
+
+
+
+
+
+
+<!-- ABOUT-2
+            ============================================= -->
+@*<section id="about-2s" class="wide-60 about-section division">
+    <div class="container">
+    <div class="row d-flex align-items-center">
+    <!-- Team Start -->
+    <div id="rs-team-2" class="rs-team-2 team-all pt-100 pb-70">
+    <center>
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Mr. Ashwani Saini</h3></a>
+    <span class="designation">IELTS Trainer</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Gaurav Arora</h3></a>
+    <span class="designation">Manager</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Parmod Kumar</h3></a>
+    <span class="designation">Visa Consultant</span>
+    </div>
+    </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Ankush Chaudhary</h3></a>
+    <span class="designation">Spoken Trainer</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Narinder Singh</h3></a>
+    <span class="designation">Spoken Trainer</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Nitesh</h3></a>
+    <span class="designation">IELTS Trainer</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Komal</h3></a>
+    <span class="designation">IELTS Trainer</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Shivani</h3></a>
+    <span class="designation">PTE Trainer</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Sonali</h3></a>
+    <span class="designation">Counselor</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Pawan Kumar</h3></a>
+    <span class="designation">Developer</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Bajinder</h3></a>
+    <span class="designation">Office Boy</span>
+    </div>
+    </div>
+    </div>
+    <div class="col-lg-3 col-md-6 col-xs-6">
+    <div class="team-item">
+    <div class="team-img">
+    <a href="#"><img src="~/Admin/Images/Teams/demo.jpg" alt="" /></a>
+    <div class="social-icon">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    <a href="#"><i class="fa fa-google-plus"></i></a>
+    <a href="#"><i class="fa fa-linkedin"></i></a>
+    </div>
+    </div>
+    <div class="team-body">
+    <a href="teachers-single.html"><h3 class="name">Ravi</h3></a>
+    <span class="designation">Office Boy</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div></center>
+    </div>
+    <!-- Team End -->
+
+    </div>
+
+    <!-- ABOUT IMAGE -->
+    <div class="col-md-6">
+    <div class="about-img text-center">
+
+    <!-- Image -->
+
+    </div>
+    </div>
+    </section>*@
+<!-- END ABOUT-2 -->
+<!-- STATISTIC-1
+            ============================================= -->
+@*  <%--<div id="statistic-1" class="bg-image wide-60 statistic-section division">
+    <div class="container white-color">
+    <div class="row">
+
+
+    <!-- STATISTIC BLOCK #1 -->
+    <div class="col-sm-6 col-md-3">
+    <div class="statistic-block icon-sm">
+
+    <!-- Icon -->
+    <span class="flaticon-316-mortarboard"></span>
+
+    <!-- Text -->
+    <h5><span class="count-element">820</span>+</h5>
+    <p>Students</p>
+
+    </div>
+    </div>
+
+    <!-- STATISTIC BLOCK #2 -->
+    <div class="col-sm-6 col-md-3">
+    <div class="statistic-block icon-sm">
+
+    <!-- Icon -->
+    <span class="flaticon-431-bank"></span>
+
+    <!-- Text -->
+    <h5><span class="count-element">127</span></h5>
+    <p>Universities</p>
+
+    </div>
+    </div>
+
+    <!-- STATISTIC BLOCK #3 -->
+    <div class="col-sm-6 col-md-3">
+    <div class="statistic-block icon-sm">
+
+    <!-- Icon -->
+    <span class="flaticon-141-invoice"></span>
+
+    <!-- Text -->
+    <h5><span class="count-element">1636</span></h5>
+    <p>Study Visa</p>
+
+    </div>
+    </div>
+
+    <!-- STATISTIC BLOCK #4 -->
+    <div class="col-sm-6 col-md-3">
+    <div class="statistic-block icon-sm">
+
+    <!-- Icon -->
+    <span class="flaticon-033-user-2"></span>
+
+    <!-- Text -->
+    <h5><span class="count-element">43</span></h5>
+    <p>Advisors</p>
+
+    </div>
+    </div>
+
+
+    </div>
+    <!-- End row -->
+    </div>
+    <!-- End container -->
+    </div>--%>*@
+<!-- END STATISTIC-1 -->

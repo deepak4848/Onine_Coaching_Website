@@ -1,0 +1,60 @@
+﻿@model IEnumerable<YET.Models.UserModel.tbl_Teams>
+
+                    <table id="datatablesSimple">
+                        <thead>
+                            <tr>
+                                <th>TeamName</th>
+                                <th>TeamDescription</th>
+                                <th>TeamImage</th>
+                              
+                                <th>TeamDOJ</th>
+                                <th>TeamEOS</th>
+
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TeamName)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TeamDescription)
+                                    </td>
+                                    <td>
+                                        <img style="width:70px"  src="@item.TeamImage">
+
+                                      
+                                    </td>
+                                 
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TeamDOJ)
+                                    </td>
+                                    <td>
+                                        @if (item.TeamEOS == null)
+                                        {
+                                           @Html.Label("Currently Working");
+                                            
+                                        }
+                                        else
+                                        {
+                                            @Html.DisplayFor(modelItem => item.TeamEOS)
+                                        }
+                                        @Html.DisplayFor(modelItem => item.TeamEOS)
+                                    </td>
+
+                                    <td>
+                                        <a asp-action="Create" asp-route-id="@item.TeamId">Edit</a> |
+                                        <a asp-action="Details" asp-route-id="@item.TeamId">Details</a> |
+                                        <a asp-action="Delete" asp-route-id="@item.TeamId">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+
+                        </table>
+

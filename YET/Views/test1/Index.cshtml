@@ -1,0 +1,83 @@
+﻿@model IEnumerable<YET.Models.UserModel.tbl_Teams>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamDesignation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamCreatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamDOJ)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TeamEOS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedBy)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamDesignation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamCreatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamDOJ)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TeamEOS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ModifiedBy)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TeamId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.TeamId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.TeamId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,122 @@
+﻿@model YET.Models.UserModel.tbl_Teams
+
+
+@{
+    Layout = "Admin/_AdminLayout";
+    ViewData["Title"] = "Create";
+}
+
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">Add New Member to Team</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Team</li>
+            </ol>
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            <i class="fas fa-chart-area me-1"></i>
+                            Add New Team Member  <a asp-action="Index">List of Employees</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <form asp-action="Create" enctype="multipart/form-data"  >
+                                      
+                                        <input type="hidden" asp-for="TeamId" />
+@*                                       <input type="hidden" asp-for="TeamImage" />
+*@
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class=row>
+                                            <div class="form-group col-md-3">
+                                                <label asp-for="TeamName" class="control-label"></label>
+                                                <input asp-for="TeamName" class="form-control " />
+                                                <span asp-validation-for="TeamName" class="text-danger"></span>
+                                            </div>
+
+                                            <div class="form-group col-md-3">
+                                                <label asp-for="TeamDesignation" class="control-label"></label>
+                                                <input asp-for="TeamDesignation" class="form-control " />
+                                                <span asp-validation-for="TeamDesignation" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group col-md-2">
+                                                <label asp-for="TeamDOJ" class="control-label"></label>
+                                                <input asp-for="TeamDOJ" class="form-control" />
+                                                <span asp-validation-for="TeamDOJ" class="text-danger"></span>
+                                            </div>
+                                            <div class="form-group col-md-5">
+                                                <label asp-for="TeamDescription" class="control-label"></label>
+                                                <textarea asp-for="TeamDescription" class="form-control "></textarea>
+
+                                                <span asp-validation-for="TeamDescription" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label asp-for="ImageFile" class="control-label"></label>
+                                             <input asp-for="ImageFile" accept="image/*" />
+                                              <span asp-validation-for="ImageFile" class="text-danger"></span>
+                                             
+                                        </div>
+
+
+
+
+                                        <div class="form-group">
+                                            <input type="submit" value="Create" class="btn btn-primary" />
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-table me-1"></i>
+                        DataTable Example
+                    </div>
+                    <div class="card-body">
+                        <table id="datatablesSimple">
+                            <thead>
+                               <tr>
+                    <th>TeamName</th>
+                    <th>TeamDescription</th>
+                    <th>TeamImage</th>
+                    <th>TeamCreatedDate</th>
+                    <th>TeamDOJ</th>
+                    <th>TeamEOS</th>
+
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+                </tr>
+                </tfoot>
+                         
+                       
+           
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </main>
+
+
+</div>
+
+
+

@@ -1,0 +1,65 @@
+﻿@model YET.Models.UserModel.tbl_Teams
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>tbl_Teams</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TeamName" class="control-label"></label>
+                <input asp-for="TeamName" class="form-control" />
+                <span asp-validation-for="TeamName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamDescription" class="control-label"></label>
+                <input asp-for="TeamDescription" class="form-control" />
+                <span asp-validation-for="TeamDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamImage" class="control-label"></label>
+                <input asp-for="TeamImage" class="form-control" />
+                <span asp-validation-for="TeamImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamCreatedDate" class="control-label"></label>
+                <input asp-for="TeamCreatedDate" class="form-control" />
+                <span asp-validation-for="TeamCreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamDOJ" class="control-label"></label>
+                <input asp-for="TeamDOJ" class="form-control" />
+                <span asp-validation-for="TeamDOJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TeamEOS" class="control-label"></label>
+                <input asp-for="TeamEOS" class="form-control" />
+                <span asp-validation-for="TeamEOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CreatedBy" class="control-label"></label>
+                <input asp-for="CreatedBy" class="form-control" />
+                <span asp-validation-for="CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ModifiedBy" class="control-label"></label>
+                <input asp-for="ModifiedBy" class="form-control" />
+                <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

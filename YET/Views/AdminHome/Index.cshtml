@@ -1,0 +1,58 @@
+﻿@model IEnumerable<YET.Models.UserModel.tbl_Teams>
+
+@{
+    Layout = "Admin/_AdminLayout";
+    ViewData["Title"] = "Index";
+}
+<div id="layoutSidenav_content">
+    <main>
+        <div class="container-fluid px-4">
+            <h1 class="mt-4">List of Employess</h1>
+            <ol class="breadcrumb mb-4">
+                <li class="breadcrumb-item active">Team</li>
+            </ol>
+            <div class="card mb-4">
+                <div class="card-header">
+                    <i class="fas fa-table me-1"></i>
+                    DataTable Example <a asp-action="Create">Create New Employee</a>
+                </div>
+                <div class="card-body">
+                    @Html.Partial("_teamList")
+                </div>
+            </div>
+        </div>
+    </main>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+﻿@page
+@model YET.Controllers.DetailsModel
+
+<div>
+    <h4>tbl_Teams</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamDesignation)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamDesignation)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamDescription)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamDescription)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamCreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamCreatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamDOJ)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamDOJ)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.TeamEOS)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.TeamEOS)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.CreatedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.CreatedBy)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.tbl_Teams.ModifiedBy)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.tbl_Teams.ModifiedBy)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.tbl_Teams.TeamId">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

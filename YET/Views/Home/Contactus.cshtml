@@ -1,0 +1,205 @@
+﻿@{
+    ViewData["Title"] = "Contactus";
+}
+<!-- GOOGLE MAP
+        ============================================= -->
+<div id="gmap" class="gmap"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13863.908330541863!2d76.9848198!3d29.6914441!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x54a8e9eb913fcf3a!2sYour%20English%20Teacher!5e0!3m2!1sen!2sin!4v1570600130392!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe></div>
+
+
+
+
+<!-- BREADCRUMB
+============================================= -->
+<div id="breadcrumb" class="bg-darkblue division">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb white-color">
+                        <li class="breadcrumb-item"><a asp-action="Index">&#91; Home &#93;</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>  <!-- End row -->
+    </div>	<!-- End container -->
+</div>	<!-- END BREADCRUMB -->
+<!-- CONTACTS-4
+============================================= -->
+<section id="contacts-4" class="bg-lightgrey bg-tra-city wide-100 contacts-section division">
+    <div class="container">
+
+
+        <!-- SECTION TITLE -->
+        <div class="row">
+            <div class="col-md-12 section-title center">
+
+                <!-- Title -->
+                <h2 class="h2-xs">Have Questions? Get in Touch</h2>
+
+                <!-- Text -->
+                <p class="p-md">
+                    We will help You.
+                </p>
+
+            </div>
+        </div>	 <!-- END SECTION TITLE -->
+
+
+        <div class="row">
+
+
+            <div class="col-lg-7">
+                <div class="contact-boxes">
+
+
+                    <!-- LOCATION -->
+                    <div class="contact-box icon-xs clearfix mb-25">
+
+                        <!-- Icon -->
+                        <div class="contact-box-icon"><span class="flaticon-240-placeholder"></span></div>
+
+                        <!-- Text -->
+                        <div class="contact-box-txt">
+                            <h5 class="h5-sm deepblue-color"> G/C 412, First Floor, Block A, CHD City,</h5>
+                            <h5 class="h5-xs deepblue-color">Near Karan Lake, Karnal, Haryana (132001)</h5>
+                            <p class="grey-color">Our Location</p>
+                        </div>
+                       
+
+                    </div>
+
+
+                    <!-- PHONES -->
+                    <div class="contact-box icon-xs clearfix mb-25">
+
+                        <!-- Icon -->
+                        <div class="contact-box-icon"><span class="flaticon-172-telephone-1"></span></div>
+
+                        <!-- Text -->
+                        <div class="contact-box-txt">
+                            <h5 class="h5-sm deepblue-color"></h5>
+                            <h5 class="h5-xs deepblue-color">M: +91 8570838141 <a href="https://wa.me/+918570838141?text=Hi Your English Teacher" >Whatsapp</a></h5>
+                            <p class="grey-color">Let's Talk</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMAIL -->
+                    <div class="contact-box icon-xs clearfix">
+
+                        <!-- Icon -->
+                        <div class="contact-box-icon"><span class="flaticon-235-mail"></span></div>
+
+                        <!-- Text -->
+                        <div class="contact-box-txt">
+                            <h5 class="h5-xs deepblue-color"><a><span class="__cf_email__">info@yourenglishteacher.co.in</span></a></h5>
+                            <h5 class="h5-xs deepblue-color"><a><span class="__cf_email__">yetvisa@gmail.com</span></a></h5>
+                            <p class="grey-color">Drop a Query</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <!-- CONTACT FORM -->
+            <div class="col-lg-5">
+                <div class="form-holder">
+                    <div id="contactForm" class="row contact-form">
+
+                        <!-- Contact Form Input -->
+                        <div id="input-name" class="col-lg-12">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtname" ForeColor="Red" runat="server" ErrorMessage="Enter Name"></asp:RequiredFieldValidator>
+
+                            <asp:TextBox ID="txtname" class="form-control " placeholder="Enter Your Name*" runat="server"></asp:TextBox>
+                        </div>
+
+                        <!-- Contact Form Input -->
+                        <div id="input-email" class="col-lg-12">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtemail" ForeColor="Red" runat="server" ErrorMessage="Enter Email"></asp:RequiredFieldValidator>
+
+                            <asp:TextBox ID="txtemail" class="form-control email " placeholder="Enter Your Email*" runat="server"></asp:TextBox>
+                        </div>
+
+                        <div id="Div1" class="col-lg-12">
+                            <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ForeColor="Red" ControlToValidate="txtmobile" runat="server" ErrorMessage="RegularExpressionValidator" ValidationExpression="\\A[0-9]{10}\\z"></asp:RegularExpressionValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" ControlToValidate="txtmobile" ForeColor="Red" runat="server" ErrorMessage="Enter Mobile"></asp:RequiredFieldValidator>
+
+                            <asp:TextBox ID="txtmobile" class="form-control  " placeholder="Enter Your Mobile*" runat="server"></asp:TextBox>
+                        </div>
+
+
+                        <!-- Contact Form Mesaage -->
+                        <div id="input-message" class="col-lg-12 input-message">
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtmessage" ForeColor="Red" runat="server" ErrorMessage="Enter Message"></asp:RequiredFieldValidator>
+
+                            <asp:TextBox ID="txtmessage" TextMode="MultiLine" class="form-control message" rows="6" placeholder="Your Message ..." runat="server"></asp:TextBox>
+
+                        </div>
+
+                        <!-- Contact Form Button -->
+                        <div class="col-lg-12 mt-15 form-btn">
+                            <asp:Button ID="Button1" class="btn btn-primary tra-black-hover submit" runat="server" Text="Send Your Message" OnClick="Button1_Click" />
+
+                        </div>
+
+                        <!-- Contact Form Message -->
+                        <div class="col-lg-12 contact-form-msg text-center">
+                            <div class="sending-msg"><span class="loading"></span></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>	 <!-- END CONTACT FORM -->
+
+
+        </div>    <!-- End row -->
+    </div>	   <!-- End container -->
+</section>	<!-- END CONTACTS-4 -->
+<!-- CALL TO ACTION-1
+============================================= -->
+<section id="cta-1" class="bg-scroll bg-image cta-section division">
+    <div class="container white-color">
+        <div class="row d-flex align-items-center">
+
+
+            <!-- CALL TO ACTION TEXT -->
+            <div class="col-lg-8 col-xl-8">
+                <div class="cta-txt">
+
+                    <!-- Title  -->
+                    <h3 class="h3-md txt-400">Free Immigration & Visa Consultation</h3>
+
+                    <!-- Text -->
+                 @*   <%--	<p class="p-md">
+                        Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero
+                        tempus, and blandit posuere ligula varius magna congue cursus porta ultrice
+                    </p>--%>*@
+
+                </div>
+            </div>
+
+
+            <!-- CALL TO ACTION BUTTON -->
+            <div class="col-lg-4 col-xl-3 offset-xl-1">
+                <div class="cta-btn text-center">
+
+                    <!-- Phone Number -->
+                    <p class="p-md">Call : <span>0184-4024404</span></p>
+
+                    <!-- Button  -->
+                    <a href="#" class="btn btn-md btn-primary tra-white-hover btn-arrow">
+                        <span>Get Consultation <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                </div>
+            </div>
+
+
+        </div>	  <!-- End row -->
+    </div>	   <!-- End container -->
+</section>	<!-- END CALL TO ACTION-1 -->

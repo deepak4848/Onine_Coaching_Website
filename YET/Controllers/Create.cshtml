@@ -1,0 +1,65 @@
+﻿@page
+@model YET.Controllers.CreateModel
+
+<h4>tbl_Teams</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamName" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamName" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamDesignation" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamDesignation" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamDesignation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamDescription" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamDescription" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamImage" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamImage" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamCreatedDate" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamCreatedDate" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamCreatedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamDOJ" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamDOJ" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamDOJ" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.TeamEOS" class="control-label"></label>
+                <input asp-for="tbl_Teams.TeamEOS" class="form-control" />
+                <span asp-validation-for="tbl_Teams.TeamEOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.CreatedBy" class="control-label"></label>
+                <input asp-for="tbl_Teams.CreatedBy" class="form-control" />
+                <span asp-validation-for="tbl_Teams.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="tbl_Teams.ModifiedBy" class="control-label"></label>
+                <input asp-for="tbl_Teams.ModifiedBy" class="form-control" />
+                <span asp-validation-for="tbl_Teams.ModifiedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
